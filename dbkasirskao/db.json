@@ -1,0 +1,148 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "nama": "Croissant",
+      "harga": 10000,
+      "gambar": "kuasong.jpg",
+      "category": {
+        "id": 1,
+        "nama": "Makanan"
+      }
+    },
+    {
+      "id": "2",
+      "nama": "Choco Donut",
+      "harga": 8000,
+      "gambar": "chocodonut.jpg",
+      "category": {
+        "id": 1,
+        "nama": "Makanan"
+      }
+    },
+    {
+      "id": "3",
+      "nama": "Oreo Donut",
+      "harga": 8000,
+      "gambar": "oreodonut.jpg",
+      "category": {
+        "id": 1,
+        "nama": "Makanan"
+      }
+    },
+    {
+      "id": "4",
+      "nama": "French Fries",
+      "harga": 15000,
+      "gambar": "kentang.jpg",
+      "category": {
+        "id": 1,
+        "nama": "Makanan"
+      }
+    },
+    {
+      "id": "5",
+      "nama": "Cappucino",
+      "harga": 40000,
+      "gambar": "capucino.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Minuman"
+      }
+    },
+    {
+      "id": "6",
+      "nama": "Espresso",
+      "harga": 32000,
+      "gambar": "espresso.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Minuman"
+      }
+    },
+    {
+      "id": "7",
+      "nama": "Moccacino",
+      "harga": 43000,
+      "gambar": "mokacino.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Minuman"
+      }
+    },
+    {
+      "id": "8",
+      "nama": "Choco Hot Drink",
+      "harga": 34000,
+      "gambar": "chocodrink.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Minuman"
+      }
+    },
+    {
+      "id": "9",
+      "nama": "Flat White",
+      "harga": 38000,
+      "gambar": "flatwhite.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Minuman"
+      }
+    },
+    {
+      "id": "10",
+      "nama": "Matcha Latte",
+      "harga": 60000,
+      "gambar": "matchalatte.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Minuman"
+      }
+    },
+    {
+      "id": "11",
+      "nama": "Black Coffee",
+      "harga": 15000,
+      "gambar": "blekkopi.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Minuman"
+      }
+    },
+    {
+      "id": "12",
+      "nama": "Thai Tea",
+      "harga": 13000,
+      "gambar": "thaitea.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Minuman"
+      }
+    },
+    {
+      "id": "13",
+      "nama": "Coffee Latte",
+      "harga": 48000,
+      "gambar": "kopilatte.jpg",
+      "category": {
+        "id": 2,
+        "nama": "Minuman"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "nama": "Makanan"
+    },
+    {
+      "id": "2",
+      "nama": "Minuman"
+    }
+  ],
+  "cart": [],
+  "order": [],
+  "dashboard": [],
+  "datecatatan": []
+}

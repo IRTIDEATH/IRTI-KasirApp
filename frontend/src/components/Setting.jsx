@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faUtensils, faCoffee} from '@fortawesome/free-solid-svg-icons'
+import { PackagePlus } from 'lucide-react';
 import Link from 'next/link'
 
 
@@ -65,6 +66,11 @@ const Categories = ({changeCategory, pilihkategori}) => {
         <Link href={'/dashboard'} className="mt-12 font-medium text-xl text-[#D8DEE9] flex space-x-2 items-center justify-center p-3 mx-9 rounded-sm bg-transparent hover:bg-[#81A1C1] transition duration-300 ease-in-out">
             <img src={"dashbicon.svg"} alt="" className="object-contain w-[18%] h-auto"/>
             <h1 className="text-center">Dashboard</h1>
+        </Link>
+
+        <Link href={'/addproduct'} className="mt-4 font-medium text-xl text-[#D8DEE9] flex space-x-2 items-center justify-center p-3 mx-9 rounded-sm bg-transparent hover:bg-[#81A1C1] transition duration-300 ease-in-out">
+            <PackagePlus size={'30px'}/>
+            <h1 className="text-center">AddProduct</h1>
         </Link>
 
         <div className='mt-[875px]'></div>

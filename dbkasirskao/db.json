@@ -144,5 +144,12 @@
   "cart": [],
   "order": [],
   "dashboard": [],
-  "datecatatan": []
+  "datecatatan": [
+    {
+      "id": "f2dd",
+      "total_pendapatans": 119000,
+      "pelanggans": 2,
+      "date": "Fri May 31 2024"
+    }
+  ]
 }

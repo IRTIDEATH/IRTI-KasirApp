@@ -3,7 +3,7 @@
 import Navbar from "@/components/Navbar";
 import { useRouter } from 'next/router'
 
-const disableNavbar = ["/strukpembelian", "/404", "/auth/register", "/auth/login"]
+const disableNavbar = ["/strukpembelian", "/404", "/auth/register", "/auth/login", "/addproduct"]
 
 const Appshell = (props) => {
   const { children } = props;

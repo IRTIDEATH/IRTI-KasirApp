@@ -1,10 +1,10 @@
 
 
 import React from 'react'
-import { faCheck, faMinus, faPlus, faTrash, faTrashCan } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faMinus, faPlus, faTrashCan } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Modal } from "flowbite-react";
-import { comma } from '@/lib/utils';
+
 
 const ModalCart = ({cartDetail, totalHarga, btnkurang, btntambah, jumlah, handleClose, showModal, updateCart, deleteCart}) => {
     if(cartDetail) {

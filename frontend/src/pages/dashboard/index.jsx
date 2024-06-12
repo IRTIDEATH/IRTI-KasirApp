@@ -32,9 +32,12 @@ const dashboard = () => {
   const [addcatatan, setAddcatatan] = useState([])
   const [catatan, setCatatan] = useState([])
   const date = new Date()
+  const time = new Date()
 
   const {status} = useSession()
   const router = useRouter()
+
+  const { data } = useSession();
 
   useEffect(() => {
     getDashboard()
@@ -94,26 +97,52 @@ const dashboard = () => {
       })
   }
 
-  const tambahCatatan = () => {
-    axios
-      .get("http://localhost:3004/"+"datecatatan?id=")
-      .then((res) => {
-        if (res.data.length === 0) {
-          const addedcatatan = {
-            total_pendapatans: addcatatan.total_pendapatan,
-            pelanggans: addcatatan.pelanggan,
-            date: date.toDateString()
-          }
-          axios.post("http://localhost:3004/"+"datecatatan", addedcatatan).then((res) => {getCatatan()})
-        } else {
-          const addedcatatan = {
-            total_pendapatans: addcatatan.total_pendapatan,
-            pelanggans: addcatatan.pelanggan,
-            date: date.toDateString()
-          }
-          axios.post("http://localhost:3004/"+"datecatatan", addedcatatan).then((res) => {getCatatan()})
+  const TotalBayar = (totalBayar, payms) => {
+    axios.get("http://localhost:3004/"+"cart").then((res) => {
+      if(res.data.length === 0) {
+        return alert("do not empty the cart")
+      } else {
+        const pesanan = {
+          total_bayar: totalBayar,
+          metode_bayar: payms,
+          menu: keranjang
         }
-      })
+        axios.post("http://localhost:3004/"+"order", pesanan).then((res) => {})
+        router.push('/strukpembelian')
+      }
+    })
+  }
+
+  const tambahCatatan = () => {
+    axios.get("http://localhost:3004/"+"dashboard").then((res) => {
+      if(res.data.length === 0) {
+        return alert("Kerja dulu sana! (jangan kosong)")
+      } else {
+        axios
+          .get("http://localhost:3004/"+"datecatatan?id=")
+          .then((res) => {
+            if (res.data.length === 0) {
+              const addedcatatan = {
+                nama_karyawan: data && data.user.fullname,
+                total_pendapatans: addcatatan.total_pendapatan,
+                pelanggans: addcatatan.pelanggan,
+                date: date.toDateString(),
+                time: time.toTimeString()
+              }
+              axios.post("http://localhost:3004/"+"datecatatan", addedcatatan).then((res) => {getCatatan()})
+            } else {
+              const addedcatatan = {
+                nama_karyawan: data && data.user.fullname,
+                total_pendapatans: addcatatan.total_pendapatan,
+                pelanggans: addcatatan.pelanggan,
+                date: date.toDateString(),
+                time: time.toTimeString()
+              }
+              axios.post("http://localhost:3004/"+"datecatatan", addedcatatan).then((res) => {getCatatan()})
+            }
+        })
+      }
+    })
   }
 
   const theBtn = () => {
@@ -191,28 +220,30 @@ const dashboard = () => {
             </button>
           </div>
         </div>
-          <div className="w-[47vw]">
-            {/* <h1 className="mb-2">Catatan</h1>
-            <div className="w-full h-[0.10rem] bg-[#D8DEE9]"/> */}
+          <div className="w-[65vw]">
             <Table>
               <TableHeader>
                 <TableRow>
                   <TableHead>No</TableHead>
+                  <TableHead>Nama Karyawan</TableHead>
                   <TableHead>Total Pendapatan</TableHead>
                   <TableHead>Pelanggan</TableHead>
                   <TableHead>Date</TableHead>
+                  <TableHead>Time</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
                 {catatan && catatan.map((item, index) => (
                   <TableRow className="" key={item.id}>
                     <TableCell>{index+1}</TableCell>
+                    <TableCell>{item.nama_karyawan}</TableCell>
                     <TableCell>{item.total_pendapatans && item.total_pendapatans.toLocaleString("id-ID", {
                       style: "currency",
                       currency: "IDR"
                     })}</TableCell>
                     <TableCell>{item.pelanggans}</TableCell>
                     <TableCell>{item.date}</TableCell>
+                    <TableCell>{item.time}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>

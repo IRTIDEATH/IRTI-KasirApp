@@ -141,15 +141,38 @@
       "nama": "Minuman"
     }
   ],
+  "paymethod": [
+    {
+      "id": "1",
+      "title": "Cash"
+    },
+    {
+      "id": "2",
+      "title": "Dana"
+    },
+    {
+      "id": "3",
+      "title": "Qris"
+    },
+    {
+      "id": "4",
+      "title": "Visa"
+    },
+    {
+      "id": "5",
+      "title": "Gopay"
+    },
+    {
+      "id": "6",
+      "title": "PayPal"
+    },
+    {
+      "id": "7",
+      "title": "ovo"
+    }
+  ],
   "cart": [],
   "order": [],
   "dashboard": [],
-  "datecatatan": [
-    {
-      "id": "f2dd",
-      "total_pendapatans": 119000,
-      "pelanggans": 2,
-      "date": "Fri May 31 2024"
-    }
-  ]
+  "datecatatan": []
 }

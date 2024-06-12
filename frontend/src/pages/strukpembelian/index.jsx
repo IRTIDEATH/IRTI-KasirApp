@@ -93,10 +93,6 @@ const Sukses = () => {
           const totaldboard = {
             total_pendapatan: totaldboards.total_bayar,
             pelanggan: 1,
-            
-            // produk_terjual: totaldebor.menu.map((menus) => {
-            //   return (menus.jumlah)
-            // })
           }
           axios.post("http://localhost:3004/"+"dashboard", totaldboard).then((res) => {})
         } else {
@@ -150,6 +146,13 @@ const Sukses = () => {
                     style: "currency",
                     currency: "IDR"
                   })}
+                </h5>
+              </div>
+
+              <div className="flex justify-between mt-3">
+                <h5>Metode Pembayaran : </h5>
+                <h5>
+                  {struks.metode_bayar && struks.metode_bayar}
                 </h5>
               </div>
 

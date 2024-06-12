@@ -38,7 +38,7 @@ const Categories = ({changeCategory, pilihkategori}) => {
             <div className="flex flex-col w-full space-y-2">
                 {
                     status === 'unauthenticated' ? <div className="w-[50%] rounded-full h-2 bg-[#D8DEE9]"></div>
-                    : <div className="w-[50%] text-white">{data && data.user.fullname}</div>
+                    : <div className="w-[50%] text-white text-sm">{data && data.user.fullname}</div>
                 }
                 {
                     status === 'unauthenticated' ? <div className="w-[80%] rounded-full h-2 bg-[#D8DEE9]"></div>

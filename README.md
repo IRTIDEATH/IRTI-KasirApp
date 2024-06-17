@@ -1,3 +1,52 @@
+Bagaimana cara menjalankan project nya?
+1. download zip atau clone
+2. kalau sudah buka terminalnya lalu ketik
+   ```bash
+   cd frontend
+3. kalau sudah ketik
+   ```bash
+   npm install
+4. kalau sudah ketik
+   ```bash
+   npm run dev
+
+Ok Kalau sudah mengikuti perintah di atas, mari kita lanjut
+1. Buka terminal kedua
+2. kalau sudah ketik
+   ```bash
+   cd dbkasirskao
+3. kalau sudah ketik
+   ```bash
+   npm install
+4. kalau sudah ketik
+   ```bash
+   npm run start
+
+Sudah mengikuti perintah di atas? mari kita lanjut
+kembali ke terminal pertama kalian lalu kalau kalian lihat tulisan localhost:3000
+kalian klik dengan cara arahkan kursor kalian kesana lalu ctrl + klik
+maka kalian akan diarahkan ke websitenya.
+
+Tunggu beberapa saat sampai website siap
+Jika sudah selamat mencoba.
+
+<br/>
+
+## Segera Hubungi Saya Jika Ada Kendala!
+
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

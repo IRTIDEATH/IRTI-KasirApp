@@ -136,7 +136,7 @@ const dashboard = () => {
                 total_pendapatans: addcatatan.total_pendapatan,
                 pelanggans: addcatatan.pelanggan,
                 date: date.toDateString(),
-                time: time.toTimeString()
+                time: time.toLocaleTimeString()
               }
               axios.post("http://localhost:3004/"+"datecatatan", addedcatatan).then((res) => {getCatatan()})
             }
